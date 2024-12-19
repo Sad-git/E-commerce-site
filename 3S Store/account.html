@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - 3S Store</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>3S Store</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="account.html" class="active">My Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="account-page">
+        <div class="container">
+            <!-- Account Header -->
+            <div class="account-header">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&auto=format&fit=crop&q=60" alt="User Avatar">
+                        <button class="edit-avatar">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="user-details">
+                        <h1>Welcome, User</h1>
+                        <p>Member since January 2024</p>
+                    </div>
+                </div>
+                <div class="account-stats">
+                    <div class="stat">
+                        <span class="number">12</span>
+                        <span class="label">Orders</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">5</span>
+                        <span class="label">Wishlists</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">3</span>
+                        <span class="label">Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Navigation -->
+            <div class="account-nav">
+                <button class="nav-item active" data-tab="profile">
+                    <i class="fas fa-user"></i> Profile
+                </button>
+                <button class="nav-item" data-tab="orders">
+                    <i class="fas fa-shopping-bag"></i> Orders
+                </button>
+                <button class="nav-item" data-tab="wishlist">
+                    <i class="fas fa-heart"></i> Wishlist
+                </button>
+                <button class="nav-item" data-tab="addresses">
+                    <i class="fas fa-map-marker-alt"></i> Addresses
+                </button>
+                <button class="nav-item" data-tab="settings">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+            </div>
+
+            <!-- Account Content -->
+            <div class="account-content">
+                <!-- Profile Tab -->
+                <div class="tab-content active" id="profile">
+                    <h2>Personal Information</h2>
+                    <form class="profile-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" value="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" value="Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="john.doe@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+1 234 567 890">
+                            </div>
+                        </div>
+                        <button type="submit" class="save-button">Save Changes</button>
+                    </form>
+
+                    <h2>Change Password</h2>
+                    <form class="password-form">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password">
+                        </div>
+                        <button type="submit" class="save-button">Update Password</button>
+                    </form>
+                </div>
+
+                <!-- Orders Tab -->
+                <div class="tab-content" id="orders">
+                    <h2>Order History</h2>
+                    <div class="orders-list">
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3>Order #12345</h3>
+                                    <p>Placed on January 15, 2024</p>
+                                </div>
+                                <div class="order-status delivered">
+                                    <span>Delivered</span>
+                                </div>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&auto=format&fit=crop&q=60" alt="Product">
+                                    <div class="item-details">
+                                        <h4>Classic White T-Shirt</h4>
+                                        <p>Size: M | Color: White</p>
+                                        <span class="price">$29.99</span>
+                                    </div>
+                                </div>
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&auto=format&fit=crop&q=60" alt="Product">
+                                    <div class="item-details">
+                                        <h4>Denim Jeans</h4>
+                                        <p>Size: 32 | Color: Blue</p>
+                                        <span class="price">$79.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">
+                                    <span>Total:</span>
+                                    <span class="price">$109.98</span>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="track-button">Track Order</button>
+                                    <button class="review-button">Write Review</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-card">
+                            <div class="order-header">
+                                <div class="order-info">
+                                    <h3>Order #12344</h3>
+                                    <p>Placed on January 10, 2024</p>
+                                </div>
+                                <div class="order-status processing">
+                                    <span>Processing</span>
+                                </div>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&auto=format&fit=crop&q=60" alt="Product">
+                                    <div class="item-details">
+                                        <h4>Leather Jacket</h4>
+                                        <p>Size: L | Color: Black</p>
+                                        <span class="price">$199.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">
+                                    <span>Total:</span>
+                                    <span class="price">$199.99</span>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="track-button">Track Order</button>
+                                    <button class="cancel-button">Cancel Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishlist Tab -->
+                <div class="tab-content" id="wishlist">
+                    <h2>My Wishlist</h2>
+                    <div class="wishlist-grid">
+                        <div class="wishlist-item">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&auto=format&fit=crop&q=60" alt="Product">
+                                <button class="remove-button">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="item-details">
+                                <h3>Summer Dress</h3>
+                                <p>Size: S-XL</p>
+                                <span class="price">$89.99</span>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="wishlist-item">
+                            <div class="item-image">
+                                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&auto=format&fit=crop&q=60" alt="Product">
+                                <button class="remove-button">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="item-details">
+                                <h3>Running Shoes</h3>
+                                <p>Size: 40-45</p>
+                                <span class="price">$129.99</span>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Addresses Tab -->
+                <div class="tab-content" id="addresses">
+                    <h2>My Addresses</h2>
+                    <div class="addresses-grid">
+                        <div class="address-card default">
+                            <div class="address-header">
+                                <h3>Home</h3>
+                                <span class="default-badge">Default</span>
+                            </div>
+                            <div class="address-content">
+                                <p>John Doe</p>
+                                <p>123 Main Street</p>
+                                <p>Apt 4B</p>
+                                <p>New York, NY 10001</p>
+                                <p>United States</p>
+                                <p>Phone: +1 234 567 890</p>
+                            </div>
+                            <div class="address-actions">
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </div>
+                        </div>
+
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h3>Office</h3>
+                            </div>
+                            <div class="address-content">
+                                <p>John Doe</p>
+                                <p>456 Business Ave</p>
+                                <p>Suite 789</p>
+                                <p>New York, NY 10002</p>
+                                <p>United States</p>
+                                <p>Phone: +1 234 567 891</p>
+                            </div>
+                            <div class="address-actions">
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                                <button class="make-default">Make Default</button>
+                            </div>
+                        </div>
+
+                        <div class="address-card add-new">
+                            <button class="add-address">
+                                <i class="fas fa-plus"></i>
+                                <span>Add New Address</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div class="tab-content" id="settings">
+                    <h2>Account Settings</h2>
+                    <div class="settings-section">
+                        <h3>Notifications</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Email Notifications</h4>
+                                    <p>Receive updates about your orders and account activity</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>SMS Notifications</h4>
+                                    <p>Get order updates via text message</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Marketing Communications</h4>
+                                    <p>Receive promotional offers and updates</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Privacy</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Profile Visibility</h4>
+                                    <p>Make your profile visible to other users</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Activity Status</h4>
+                                    <p>Show when you're active on the site</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Account Actions</h3>
+                        <div class="settings-group">
+                            <button class="deactivate-button">Deactivate Account</button>
+                            <button class="delete-account-button">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +9810000000</p>
+                <p><i class="fas fa-envelope"></i> info@3sstore.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Damak Jhapa, Nepal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 3S Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/account.js"></script>
+</body>
+</html> 

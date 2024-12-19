@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - 3S Store</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/confirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>3S Store</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="confirmation-page">
+        <div class="confirmation-container">
+            <!-- Success Message -->
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <h1>Thank You for Your Order!</h1>
+                <p>Your order has been successfully placed.</p>
+            </div>
+
+            <!-- Order Information -->
+            <div class="order-info">
+                <div class="order-header">
+                    <h2>Order Details</h2>
+                    <span class="order-date" id="order-date"></span>
+                </div>
+                <div class="order-number">
+                    <span>Order Number:</span>
+                    <span id="order-id" class="highlight"></span>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="order-items">
+                    <!-- Order items will be loaded dynamically via JavaScript -->
+                </div>
+
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="confirmation-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span id="confirmation-shipping">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax</span>
+                        <span id="confirmation-tax">$0.00</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="confirmation-total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping Information -->
+            <div class="shipping-info">
+                <h3>Shipping Information</h3>
+                <div id="shipping-details">
+                    <!-- Shipping details will be loaded dynamically via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <div class="steps-grid">
+                    <div class="step">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Order Confirmation Email</h4>
+                        <p>We've sent a confirmation email to your registered email address.</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-truck"></i>
+                        <h4>Order Processing</h4>
+                        <p>Your order will be processed and shipped within 1-2 business days.</p>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-bell"></i>
+                        <h4>Shipping Updates</h4>
+                        <p>You'll receive shipping updates via email once your order is dispatched.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="confirmation-actions">
+                <a href="account.html" class="btn-secondary">
+                    <i class="fas fa-user"></i> View Order History
+                </a>
+                <a href="products.html" class="btn-primary">
+                    <i class="fas fa-shopping-bag"></i> Continue Shopping
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +9810000000</p>
+                <p><i class="fas fa-envelope"></i> info@3sstore.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Damak Jhapa, Nepal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 3S Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/confirmation.js"></script>
+</body>
+</html> 

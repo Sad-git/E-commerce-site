@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - 3S Store</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>3S Store</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-page">
+        <h1>Checkout</h1>
+        
+        <!-- Checkout Progress -->
+        <div class="checkout-progress">
+            <div class="progress-step active">
+                <span class="step-number">1</span>
+                <span class="step-text">Billing Details</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <span class="step-number">2</span>
+                <span class="step-text">Payment</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <span class="step-number">3</span>
+                <span class="step-text">Confirmation</span>
+            </div>
+        </div>
+
+        <div class="checkout-container">
+            <!-- Billing Form -->
+            <div class="billing-details">
+                <h2>Billing Information</h2>
+                <form id="billing-form" class="billing-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Province *</label>
+                            <input type="text" id="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP/Postal Code *</label>
+                            <input type="text" id="zip" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" required>
+                            <option value="">Select Country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="GB">United Kingdom</option>
+                            <!-- Add more countries as needed -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Order Notes (Optional)</label>
+                        <textarea id="notes" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="save-info">
+                        <label for="save-info">Save this information for next time</label>
+                    </div>
+
+                    <div class="form-group checkbox terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="terms.html">Terms and Conditions</a> *</label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="order-items">
+                    <!-- Order items will be loaded dynamically via JavaScript -->
+                </div>
+
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span id="checkout-shipping">$0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax (10%)</span>
+                        <span id="checkout-tax">$0.00</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="checkout-total">$0.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="proceed-payment" form="billing-form">
+                    Proceed to Payment
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +9810000000</p>
+                <p><i class="fas fa-envelope"></i> info@3sstore.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Damak Jhapa, Nepal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Secure Payments</h3>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 3S Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html> 

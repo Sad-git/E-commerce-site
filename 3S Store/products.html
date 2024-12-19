@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - 3S Store</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>3S Store</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="about.html">About Store</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html">Login/Register</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <!-- Filter Panel -->
+        <aside class="filter-panel">
+            <h2>Filters</h2>
+            
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" id="price-range" min="0" max="1000" step="10">
+                    <div class="price-inputs">
+                        <input type="number" id="min-price" placeholder="Min">
+                        <span>-</span>
+                        <input type="number" id="max-price" placeholder="Max">
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="mens"> Men's Wear</label>
+                    <label><input type="checkbox" value="womens"> Women's Wear</label>
+                    <label><input type="checkbox" value="accessories"> Accessories</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Size</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="xs"> XS</label>
+                    <label><input type="checkbox" value="s"> S</label>
+                    <label><input type="checkbox" value="m"> M</label>
+                    <label><input type="checkbox" value="l"> L</label>
+                    <label><input type="checkbox" value="xl"> XL</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Color</h3>
+                <div class="color-options">
+                    <label class="color-option">
+                        <input type="checkbox" value="black">
+                        <span class="color-swatch" style="background-color: black;"></span>
+                    </label>
+                    <label class="color-option">
+                        <input type="checkbox" value="white">
+                        <span class="color-swatch" style="background-color: white;"></span>
+                    </label>
+                    <label class="color-option">
+                        <input type="checkbox" value="red">
+                        <span class="color-swatch" style="background-color: red;"></span>
+                    </label>
+                    <label class="color-option">
+                        <input type="checkbox" value="blue">
+                        <span class="color-swatch" style="background-color: blue;"></span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="apply-filters" class="btn-primary">Apply Filters</button>
+            <button id="clear-filters" class="btn-secondary">Clear All</button>
+        </aside>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="products-header">
+                <h1>All Products</h1>
+                <div class="sorting-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-container">
+                <!-- Products will be loaded dynamically via JavaScript -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-btn">10</button>
+                <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +9810000000</p>
+                <p><i class="fas fa-envelope"></i> info@3sstore.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Damak Jhapa, Nepal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 3S Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+</body>
+</html> 
